@@ -51,7 +51,7 @@ class ElapsedSinceDoom extends React.Component {
 }
 
 function InformationPanel() {
-  return <span>
+  return <aside>
     <h3>Why should he resign?</h3>
     <p>Gavin Williamson's policies will have destroyed the lives of many young people. Whilst he did apologise for this, his fixes were too late and were after many people lost their university places.</p>
 
@@ -60,7 +60,7 @@ function InformationPanel() {
 
     <h3>Should I go and [do social media action to] him?</h3>
     <p><b>No.</b> This website is for informational and satirical purposes only. I do not condone any personal attacks. He only deserves to lose his position as anyone who failed at a job as badly as he did would have to in normal circumstances.</p>
-  </span>;
+  </aside>;
 }
 
 export default class App extends React.Component {
@@ -97,41 +97,41 @@ export default class App extends React.Component {
     let el;
     switch (this.state.resignationDate) {
       case undefined: {
-        el = <div>
+        el = <main>
           <h1>Loading...</h1>
-        </div>;
+        </main>;
         break;
       }
       case 0: {
-        el = <div>
+        el = <main>
           <h1>I can't figure out if he resigned.</h1>
-          <p>There's an issue either your end, my end or the governments end. This should change in a few seconds when I can update.</p>
-        </div>;
+          <p>There's an issue either your end, my end or the government's end. This should change in a few seconds when I can update.</p>
+        </main>;
         break;
       }
       case null: {
-        el = <div>
+        el = <main>
           <h1>Gavin has not resigned yet.</h1>
-          <p>Time elapsed since the A level/BTEC results day where his policies altered the lives of many students:</p>
+          <p>Time elapsed since the A-Level/BTEC results day where his policies altered the lives of many students:</p>
           <ElapsedSinceDoom />
-        </div>;
+        </main>;
         break;
       }
       default: {
         const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }) 
         const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(this.state.resignationDate);
-        el = <div>
-          <h1>🦀 GAVIN IS GONE 🦀</h1>
-          <p>Gavin resigned on {day} {month} {year}.</p>
-          <iframe width="1000" height="600" src="https://www.youtube.com/embed/LDU_Txk06tM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>;
+        el = <main>
+          <h1>🦀 GAV IS GONE 🦀</h1>
+          <p>Gavin resigned on <b>{day} {month} {year}</b>.</p>
+          <iframe src="https://www.youtube.com/embed/LDU_Txk06tM?autoplay=1&amp;t=74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </main>;
       }
     }
 
     // Return the rendered app.
     return <div className="App">
       {el}
-      <hr style={{marginTop: '20px'}} />
+      <hr />
       <InformationPanel />
     </div>;
   }
