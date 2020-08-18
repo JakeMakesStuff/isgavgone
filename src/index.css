@@ -18,12 +18,16 @@ h1, h2, h3 {
 }
 
 /* Countdown Section */
+main {
+  text-align: center;
+}
+
 main h1 {
   font-size: 3em;
 }
 
 main p {
-  margin-bottom: 0;
+  margin-bottom: 12px;
   font-size: 0.9em;
 }
 
@@ -33,6 +37,7 @@ main h2 {
 }
 
 main iframe {
+  margin: 32px 0;
   width: 100%;
   height: 50vh;
   border: none;
@@ -65,3 +70,19 @@ aside p {
   margin: 0;
 }
 /* /Q&A */
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #999'
+}
+
+footer a {
+  color: #6c6c6c;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+/* /Footer */
