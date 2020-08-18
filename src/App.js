@@ -113,6 +113,7 @@ export default class App extends React.Component {
         el = <main>
           <h1>Gavin has not resigned yet.</h1>
           <p>Time elapsed since the A-Level/BTEC results day where his policies altered the lives of many students:</p>
+          <br />
           <ElapsedSinceDoom />
         </main>;
         break;
@@ -130,7 +131,9 @@ export default class App extends React.Component {
 
     // Return the rendered app.
     return <div className="App">
-      {el}
+      <span style={{textAlign: "center"}}>
+        {el}
+      </span>
       <hr />
       <InformationPanel />
     </div>;
