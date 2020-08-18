@@ -137,6 +137,12 @@ export default class App extends React.Component {
       </span>
       <hr />
       <InformationPanel />
+      <hr />
+      <aside style={{textAlign: 'center'}}>
+        <p>
+          <a href="https://jakegealer.me">Personal Website</a> | <a href="https://github.com/JakeMakesStuff/isgavgone">GitHub Repository</a>
+        </p>
+      </aside>
     </div>;
   }
 }
