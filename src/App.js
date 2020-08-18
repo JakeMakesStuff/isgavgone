@@ -113,7 +113,6 @@ export default class App extends React.Component {
         el = <main>
           <h1>Gavin has not resigned yet.</h1>
           <p>Time elapsed since the A-Level/BTEC results day where his policies altered the lives of many students:</p>
-          <br />
           <ElapsedSinceDoom />
         </main>;
         break;
@@ -124,7 +123,6 @@ export default class App extends React.Component {
         el = <main>
           <h1>🦀 GAV IS GONE 🦀</h1>
           <p>Gavin resigned on <b>{day} {month} {year}</b>.</p>
-          <br />
           <iframe src="https://www.youtube.com/embed/LDU_Txk06tM?autoplay=1&amp;t=74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </main>;
       }
@@ -132,17 +130,15 @@ export default class App extends React.Component {
 
     // Return the rendered app.
     return <div className="App">
-      <span style={{textAlign: "center"}}>
-        {el}
-      </span>
+      {el}
       <hr />
       <InformationPanel />
       <hr />
-      <aside style={{textAlign: 'center'}}>
+      <footer>
         <p>
-          <a href="https://jakegealer.me">Personal Website</a> | <a href="https://github.com/JakeMakesStuff/isgavgone">GitHub Repository</a>
+          <a href="https://jakegealer.me">Personal Website</a> &bull; <a href="https://github.com/JakeMakesStuff/isgavgone">GitHub Repository</a>
         </p>
-      </aside>
+      </footer>
     </div>;
   }
 }
