@@ -124,6 +124,7 @@ export default class App extends React.Component {
         el = <main>
           <h1>🦀 GAV IS GONE 🦀</h1>
           <p>Gavin resigned on <b>{day} {month} {year}</b>.</p>
+          <br />
           <iframe src="https://www.youtube.com/embed/LDU_Txk06tM?autoplay=1&amp;t=74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </main>;
       }
