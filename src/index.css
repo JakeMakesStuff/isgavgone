@@ -54,6 +54,7 @@ hr {
 aside h3 {
   margin-top: 32px;
   margin-bottom: 4px;
+  font-weight: 700;
 }
 
 aside h3:first-of-type {
