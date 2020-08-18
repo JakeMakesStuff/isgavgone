@@ -1,0 +1,10 @@
+account_id = "ac2dd89af834dd17d7f5cf5df3789f08"
+name = "isgavgone"
+type = "webpack"
+route = "*isgavgone.com/*"
+workers_dev = false
+zone_id = "bd606e8487c052cb57160353fabf3bef"
+
+[site]
+bucket = "./build"
+entry-point = "workers-site"
